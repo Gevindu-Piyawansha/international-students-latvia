@@ -10,7 +10,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import Home from './pages/Home';
 
 
-// Placeholder components - we'll create these next
+// Placeholder components 
 const Apartments: React.FC = () => (
   <div className="text-center py-16">
     <h1 className="text-3xl font-bold">Apartments - Coming Soon!</h1>
@@ -48,18 +48,29 @@ const Contact: React.FC = () => (
 
 function App() {
   return (
+    <AuthProvider>
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/apartments" element={<Apartments />} />
-          <Route path="/cars" element={<Cars />} />
-          <Route path="/foods" element={<Foods />} />
-          <Route path="/p2p" element={<P2P />} />
-          <Route path="/contact" element={<Contact />} />
+          {/* Auth routes - no layout */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          
+          {/* Main app routes - with layout */}
+          <Route path="/*" element={
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/apartments" element={<Apartments />} />
+              <Route path="/cars" element={<Cars />} />
+              <Route path="/foods" element={<Foods />} />
+              <Route path="/p2p" element={<P2P />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          } />
         </Routes>
       </Layout>
     </Router>
+    </AuthProvider>
   );
 }
 
