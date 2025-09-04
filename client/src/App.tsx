@@ -3,7 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
+import { AuthProvider } from './contexts/AuthContext';
+
 import Home from './pages/Home';
+
 
 // Placeholder components - we'll create these next
 const Apartments: React.FC = () => (
