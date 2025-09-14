@@ -24,9 +24,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div>
               <h4 className="text-md font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-300">
+                <li><a href="/news" className="hover:text-white">News</a></li>
                 <li><a href="/apartments" className="hover:text-white">Apartments</a></li>
                 <li><a href="/cars" className="hover:text-white">Cars</a></li>
-                <li><a href="/foods" className="hover:text-white">Foods</a></li>
+                <li><a href="/foodsandgroceries" className="hover:text-white">Foods & Groceries</a></li>
                 <li><a href="/p2p" className="hover:text-white">P2P Marketplace</a></li>
               </ul>
             </div>

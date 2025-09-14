@@ -11,6 +11,13 @@ import Home from './pages/Home';
 
 
 // Placeholder components 
+const News: React.FC = () => (
+  <div className="text-center py-16">
+    <h1 className="text-3xl font-bold">News - Coming Soon!</h1>
+    <p className="text-gray-600 mt-4">Stay updated with the latest news and events.</p>
+  </div>
+);
+
 const Apartments: React.FC = () => (
   <div className="text-center py-16">
     <h1 className="text-3xl font-bold">Apartments - Coming Soon!</h1>
@@ -25,10 +32,10 @@ const Cars: React.FC = () => (
   </div>
 );
 
-const Foods: React.FC = () => (
+const FoodsAndGroceries: React.FC = () => (
   <div className="text-center py-16">
-    <h1 className="text-3xl font-bold">Foods - Coming Soon!</h1>
-    <p className="text-gray-600 mt-4">Discover international food options.</p>
+    <h1 className="text-3xl font-bold">Foods & Groceries - Coming Soon!</h1>
+    <p className="text-gray-600 mt-4">Discover international food & grocery options.</p>
   </div>
 );
 
@@ -60,9 +67,10 @@ function App() {
           <Route path="/*" element={
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/news" element={<News />} />
               <Route path="/apartments" element={<Apartments />} />
               <Route path="/cars" element={<Cars />} />
-              <Route path="/foods" element={<Foods />} />
+              <Route path="/foodsandgroceries" element={<FoodsAndGroceries />} />
               <Route path="/p2p" element={<P2P />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Building, Car, Utensils, Users, Phone, User, LogOut, LogIn } from 'lucide-react';
+import { Home, Newspaper, Building, Car, Utensils, Users, Phone, User, LogOut, LogIn } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 
 const Header: React.FC = () => {
@@ -9,9 +9,10 @@ const Header: React.FC = () => {
 
   const navItems = [
     { path: '/', label: 'Home', icon: Home },
+    { path: '/news', label: 'News', icon: Newspaper },
     { path: '/apartments', label: 'Apartments', icon: Building },
     { path: '/cars', label: 'Cars', icon: Car },
-    { path: '/foods', label: 'Foods', icon: Utensils },
+    { path: '/foodsandgroceries', label: 'Foods & Groceries', icon: Utensils },
     { path: '/p2p', label: 'P2P', icon: Users },
     { path: '/contact', label: 'Contact', icon: Phone }
   ];

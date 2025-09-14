@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Building, Car, Utensils, Users, ArrowRight } from 'lucide-react';
+import { Building, Car, Utensils, Users, ArrowRight, Newspaper } from 'lucide-react';
 
 const Home: React.FC = () => {
   const services = [
+    {
+      title: 'News',
+      description: 'Stay updated with the latest news and events',
+      icon: Newspaper,
+      link: '/news',
+      color: 'bg-red-500',
+      hoverColor: 'hover:bg-red-600'
+    },
     {
       title: 'Apartments',
       description: 'Find and share apartment listings with fellow students',
@@ -21,10 +29,10 @@ const Home: React.FC = () => {
       hoverColor: 'hover:bg-green-600'
     },
     {
-      title: 'Foods',
+      title: 'Foods & Groceries',
       description: 'Discover international food options and restaurants',
       icon: Utensils,
-      link: '/foods',
+      link: '/foodsandgroceries',
       color: 'bg-yellow-500',
       hoverColor: 'hover:bg-yellow-600'
     },
@@ -45,7 +53,7 @@ const Home: React.FC = () => {
           Welcome International Students in Latvia! 🌍🇱🇻
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-          Your trusted community platform for finding apartments, cars, food, 
+          Your trusted community platform for finding news, apartments, cars, foods & groceries,
           and connecting with fellow international students across Latvia.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -109,7 +117,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-8">
+      <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-blue-2  b00 rounded-xl p-8">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">
           Ready to Connect with Your Community?
         </h2>
