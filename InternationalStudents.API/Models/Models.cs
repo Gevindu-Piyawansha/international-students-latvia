@@ -3,6 +3,55 @@ using Google.Cloud.Firestore;
 namespace InternationalStudents.API.Models
 {
     [FirestoreData]
+    public class News
+    {
+        [FirestoreProperty]
+        public string Id { get; set; } = string.Empty;
+
+        [FirestoreProperty]
+        public string Title { get; set; } = string.Empty;
+
+        [FirestoreProperty]
+        public string Content { get; set; } = string.Empty;
+
+         [FirestoreProperty]
+        public string? Summary { get; set; }
+
+        [FirestoreProperty]
+        public string? Category { get; set; }
+
+        [FirestoreProperty]
+        public string? AuthorName { get; set; } = string.Empty;
+
+        [FirestoreProperty]
+        public string AuthorId { get; set; } = string.Empty;
+        
+        [FirestoreProperty]
+        public DateTime CreatedAt { get; set; }
+
+        [FirestoreProperty]
+        public DateTime UpdatedAt { get; set; }
+
+        [FirestoreProperty]
+        public bool IsPublished { get; set; } = false;
+
+        [FirestoreProperty]
+        public DateTime? PublishedAt { get; set; }
+
+        [FirestoreProperty]
+        public List<string>? Tags { get; set; } = new();
+
+        [FirestoreProperty]
+        public List<string>? Images { get; set; } = new();
+
+        [FirestoreProperty]
+        public string UserId { get; set; } = string.Empty;
+
+        [FirestoreProperty]
+        public int ViewCount { get; set; } = 0;
+    }
+    
+    [FirestoreData]
     public class Apartment
     {
         [FirestoreProperty]

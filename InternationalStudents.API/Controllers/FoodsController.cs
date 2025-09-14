@@ -32,7 +32,7 @@ namespace InternationalStudents.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<string>> CreateFood(CreateFoodDto dto)
+        public async Task<ActionResult<string>> CreateFood(CreateFoodsDto dto)
         {
             try
             {
